@@ -8,6 +8,7 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import API_KEY from "../request";
+import { convertMsToTime } from "./MilitoTime";
 
 
 // base url
@@ -17,55 +18,23 @@ const baseURL="https://newsapi.org/v2";
 function Cards() {
   // news state
   const [news, setnews] = useState([]);
-  // modal state
 
   useEffect(() => {
     async function GetNews() {
       const response = await axios.get(
-        `${baseURL}`+`/top-headlines?country=in&pageSize=100&apiKey=${API_KEY}`
+        `${baseURL}/top-headlines?country=in&pageSize=100&apiKey=${API_KEY}`
       );
       setnews(response);
     }
     GetNews();
   }, []);
-
-
-
-
-
-  function padTo2Digits(num) {
-    return num.toString().padStart(1);
-  }
-
-
-  function convertMsToTime(milliseconds) {
-    let seconds = Math.floor(milliseconds / 1000);
-    let minutes = Math.floor(seconds / 60);
-    let hours = Math.floor(minutes / 60);
   
-    seconds = seconds % 60;
-    minutes = minutes % 60;
-    hours = hours % 24;
-  
-    // return `${padTo2Digits(hours)}:${padTo2Digits(minutes)}`;
-
-    if(padTo2Digits(hours)>0){
-      return `${padTo2Digits(hours)}h ago`
-    }
-    else if(padTo2Digits(hours)<=0){
-      return `${padTo2Digits(minutes)}mins ago`
-    }
-
-  }
   
   const getColumnsForRow = () => {
     if (news.length !== 0) {
       var count = 0;
-
       let items = news.data.articles.map((item, idno) => {
-        
         count++;
-        // console.log(count)
         return (
           <Col
             className="cardscol"
