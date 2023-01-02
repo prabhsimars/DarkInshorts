@@ -3,7 +3,7 @@ import "../App.css";
 import { Container, Row, Col, Button, Card, Modal } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Shit from "./shit";
+import Shit from "../Components/shit";
 
 // const API_KEY = "2daca2e4d20f4a079db5a74acb01527d";
 
@@ -15,10 +15,8 @@ function Cards() {
   
   useEffect(() => {
     async function GetNews() {
-      axios.defaults.headers.post['Content-Type']='application/x-www-form-urlencoded';
-      axios.defaults.headers.post['Access-Control-Allow-Origin']='*';
       const response = await axios.get(
-        "https://newsapi.org/v2/everything?domains=ndtv.com&apiKey=2daca2e4d20f4a079db5a74acb01527d", { mode: "cors" }
+        "https://newsapi.org/v2/everything?domains=ndtv.com&apiKey=2daca2e4d20f4a079db5a74acb01527d"
       );
       setnews(response);
     }

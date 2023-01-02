@@ -2,17 +2,26 @@ import React from 'react';
 import '../App.css';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import {BsLayoutTextSidebarReverse} from 'react-icons/bs'
+import {CgProfile} from 'react-icons/cg'
 
-function NAV() {
+function NAV({toggleDrawer}) {
+
+  
   return (
     <div id='navbardiv'>
-        <Navbar fixed="top" bg="dark" variant="dark" >
-            <Container>
-            <Navbar.Brand  className='navbar-brand m-auto'>
-                Top <b></b>𝟷൦൦<b></b>
-            </Navbar.Brand>
-            </Container>
-        </Navbar>
+      {/* top navbar */}
+      <Navbar bg="light" variant="light" className='shadow-sm bg-white rounded' fixed="top" >
+      <Container>
+        <Navbar.Brand><BsLayoutTextSidebarReverse className='navIcon' onClick={toggleDrawer}/></Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse className="justify-content-end">
+          <Navbar.Text>
+            <CgProfile className='navIcon'/>
+          </Navbar.Text>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
     </div>
   )
 }
