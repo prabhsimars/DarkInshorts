@@ -1,19 +1,22 @@
 
 import { MdToday } from "react-icons/md";
-import { BsFillBookmarksFill, BsClockFill } from "react-icons/bs";
+import { BsFillBookmarksFill } from "react-icons/bs";
+// import {BsClockFill} from 'react-icons/bs';
 export const SidebarCat = [{
     id:111,
     name:"Today",
-    icon:<MdToday/>
+    icon:<MdToday/>,
+    link:"/"
 },
 {
     id:112,
     name:"Bookmarks",
-    icon:<BsFillBookmarksFill/>
+    icon:<BsFillBookmarksFill/>,
+    link:"/bookmarks"
 },
-{
-    id:113,
-    name:"History",
-    icon:<BsClockFill/>
-}
+// {
+//     id:113,
+//     name:"History",
+//     icon:<BsClockFill/>
+// }
 ]

@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "../App.css";
 import {
   ListItemText,
@@ -9,23 +8,19 @@ import {
 } from "@mui/material";
 import { NewsChannels } from "./NewsChannels";
 import { SidebarCat } from "./SidebarCat";
+import {Link} from 'react-router-dom'
 
-function Channels() {
+function Channels({selectedIndex,handleListItemClick}) {
   // setting active and non active
 
-  const [selectedIndex, setSelectedIndex] = useState(111);
-
-  const handleListItemClick = (event, index) => {
-    console.log(event.target.id, index);
-    setSelectedIndex(index);
-  };
-
+ 
   return (
     <div>
       <p className="sidebar_titles">News</p>
       <List>
         {SidebarCat.map((title) => (
-          <ListItem key={title.id} disablePadding>
+          <Link style={{color:"black",textDecoration:"none"}} to={title.link}>
+            <ListItem key={title.id} disablePadding>
             <ListItemButton
               className="MenuItem"
               id={"listitem" + title.id}
@@ -38,6 +33,7 @@ function Channels() {
               <ListItemText primary={title.name} />
             </ListItemButton>
           </ListItem>
+          </Link>
         ))}
       </List>
 

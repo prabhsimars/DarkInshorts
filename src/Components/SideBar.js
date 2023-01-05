@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import {
@@ -9,10 +10,18 @@ import {
 } from "@mui/material";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
-
 import Channels from "./Channels";
 
 export default function SideBar({ open, toggleDrawer }) {
+
+   // drawer selection settings
+   const [selectedIndex, setSelectedIndex] = useState(111);
+
+   const handleListItemClick = (event, index) => {
+     console.log(event.target.id, index);
+     setSelectedIndex(index);
+   };
+ 
 
   return (
     <div id="offcanvassidebar">
@@ -46,7 +55,7 @@ export default function SideBar({ open, toggleDrawer }) {
                 />
               </div>
               {/* all sidebar content */}
-              <Channels></Channels>
+              <Channels selectedIndex={selectedIndex} handleListItemClick={handleListItemClick}></Channels>
             </Box>
           </SwipeableDrawer>
         </React.Fragment>

@@ -55,6 +55,8 @@ html {
 #title_image {
   width: 7rem;
   height: auto;
+  mix-blend-mode:color-burn;
+
 }
 
 /* sidebar */
@@ -125,10 +127,34 @@ html {
   
 }
 
+
+.cardbookmarksdiv{
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.412);
+  right: 0%;
+  border: 1px solid rgb(43, 43, 43);
+  border-radius: 20px;
+  margin: 0.3rem;
+  transition: 0.2s ease-in-out;
+}
+
+.cardbookmarksdiv:hover{
+  background-color: white;
+  
+}
+
+
+.cardbookmarks{
+  padding: 0.4rem;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+}
+
 .cardimg{
   height: 16rem;
 }
 
+/* to limit the number of lines to show */
 .modernWay {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -140,18 +166,32 @@ html {
 
 .author{
   position: absolute;
-  right:0rem;
-  bottom: 0.3rem;
+  right:-1rem;
+  bottom: 0;
   width: 30%;
   
 }
 
-.cardbtn{
-  font-size: 1vw;
-  width: 50%;
+.cardbtns{
+  width: auto;
   position: absolute;
   left:1rem;
-  bottom: 1rem;
+  bottom: 0;
+}
+
+.itemurlp{
+  text-decoration: none;
+  color: grey;
+  transition: 0.2s ease-in-out;
+}
+
+.itemurlp p{
+  font-size: 0.7rem;
+}
+
+.itemurlp:hover{
+  color: black;
+  
 }
 
 

@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import {BsLayoutTextSidebarReverse} from 'react-icons/bs'
 import {CgProfile} from 'react-icons/cg'
+import Titlebar from './Titlebar';
 
 function NAV({toggleDrawer}) {
 
@@ -22,6 +23,8 @@ function NAV({toggleDrawer}) {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    {/* title bar */}
+    <Titlebar/>
     </div>
   )
 }
