@@ -7,6 +7,7 @@ import HomePageCards from "./Components/HomePageCards";
 import SideBar from "./Components/SideBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Bookmarks from "./Components/Bookmarks";
+import SpecificChannels from "./Components/SpecificChannels";
 
 function App() {
   // sidebar state
@@ -24,7 +25,7 @@ function App() {
               <div>
                 <Nav toggleDrawer={handleDrawerOpen}></Nav>
                 <SideBar open={open} toggleDrawer={handleDrawerClose}></SideBar>
-                <HomePageCards/>
+                <HomePageCards />
               </div>
             }
           />
@@ -35,9 +36,19 @@ function App() {
               <div>
                 <Nav toggleDrawer={handleDrawerOpen}></Nav>
                 <SideBar open={open} toggleDrawer={handleDrawerClose}></SideBar>
-                <Bookmarks/>
-            </div>
+                <Bookmarks />
+              </div>
+            }
+          />
 
+          <Route
+            path="/specificnews"
+            element={
+              <div>
+                <Nav toggleDrawer={handleDrawerOpen}></Nav>
+                <SideBar open={open} toggleDrawer={handleDrawerClose}></SideBar>
+                <SpecificChannels/>
+              </div>
             }
           />
         </Routes>

@@ -18,78 +18,93 @@ export const NewsChannels = [
     {
       name:'Hindustan Times',
       image:hindustantimes,
-      id:1
+      id:1,
+      value:'hindustantimes.com'
     },
     {
       name:'India Today',
       image:indiatoday,
-      id:2
+      id:2,
+      value:'indiatoday.in'
     },
     {
       name:'India Times',
       image:indiatimes,
-      id:3
+      id:3,
+      value:'indiatimes.com'
     },
     {
       name:'NDTV',
       image:ndtv,
-      id:4
+      id:4,
+      value:'ndtv.com'
     },
     {
       name:'Vox',
       image:vox,
-      id:5
+      id:5,
+      value:'vox.com'
     },
     {
       name:'Bloomberg',
       image:bloomberg,
-      id:6
+      id:6,
+      value:'bloomberg.com'
     },
     {
       name:'Business Today',
       image:businesstoday,
-      id:7
+      id:7,
+      value:'businesstoday.in'
     },
     {
       name:'Indian Express',
       image:indianexpress,
-      id:8
+      id:8,
+      value:'indianexpress.com'
     },
     {
       name:'Al Jazeera',
       image:aljazeera,
-      id:9
+      id:9,
+      value:'aljazeera.com'
     },
 
     {
     name:'The Washington Post',
     image:washingtonpost,
-    id:10
+    id:10,
+    value:'washingtonpost.com'
     },
     {
     name:'Deccan Herald',
     image:deccanherald,
-    id:11
+    id:11,
+    value:'deccanherald.com'
     },
     {
     name:'Financial Express',
     image:financialexpress,
-    id:12
+    id:12,
+    value:'financialexpress.com'
     },
     {
     name:'Tribune India',
     image:tribuneindia,
-    id:13
+    id:13,
+    value:'tribuneindia.com'
     },
     {
     name:'Times now',
     image:timesnow,
-    id:14
+    id:14,
+    value:'timesnownews.com'
     },
     {
     name:'Mint',
     image:mint,
-    id:15
+    id:15,
+    value:'livemint.com'
     },
    
 

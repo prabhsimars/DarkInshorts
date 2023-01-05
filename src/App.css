@@ -167,6 +167,7 @@ html {
 .author{
   position: absolute;
   right:-1rem;
+  font-size: 0.75rem;
   bottom: 0;
   width: 30%;
   
