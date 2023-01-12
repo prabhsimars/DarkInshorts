@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const bookmarkarray = [{
+export const bookmarkarray = [{
     
 }]
 

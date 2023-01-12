@@ -11,10 +11,8 @@ import { SidebarCat } from "./SidebarCat";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-function Channels({ selectedIndex, handleListItemClick }) {
+function Channels({ selectedIndex, handleListItemClick, currentchannel, setcurrentchannel }) {
 
-  // for choosing the channel
-  const [currentchannel, setcurrentchannel] = useState();
 
   return (
     <div>
@@ -57,7 +55,6 @@ function Channels({ selectedIndex, handleListItemClick }) {
                 onClick={(event) => {
                   handleListItemClick(event, item.id);
                   setcurrentchannel(item.value);
-
                 }}
               >
                 <ListItemIcon>
@@ -74,7 +71,6 @@ function Channels({ selectedIndex, handleListItemClick }) {
           </Link>
         ))}
       </List>
-      {console.log(currentchannel)};
     </div>
   );
 }

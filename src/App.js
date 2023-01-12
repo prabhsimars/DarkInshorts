@@ -15,6 +15,10 @@ function App() {
   const handleDrawerOpen = () => setOpen(true);
   const handleDrawerClose = () => setOpen(false);
 
+
+  // for choosing the channel
+  const [currentchannel, setcurrentchannel] = useState("hindustantimes.com");
+
   return (
     <Router>
       <div className="App">
@@ -24,7 +28,7 @@ function App() {
             element={
               <div>
                 <Nav toggleDrawer={handleDrawerOpen}></Nav>
-                <SideBar open={open} toggleDrawer={handleDrawerClose}></SideBar>
+                <SideBar open={open} toggleDrawer={handleDrawerClose} currentchannel={currentchannel} setcurrentchannel={setcurrentchannel}></SideBar>
                 <HomePageCards />
               </div>
             }
@@ -35,7 +39,7 @@ function App() {
             element={
               <div>
                 <Nav toggleDrawer={handleDrawerOpen}></Nav>
-                <SideBar open={open} toggleDrawer={handleDrawerClose}></SideBar>
+                <SideBar open={open} toggleDrawer={handleDrawerClose} currentchannel={currentchannel} setcurrentchannel={setcurrentchannel}></SideBar>
                 <Bookmarks />
               </div>
             }
@@ -46,8 +50,8 @@ function App() {
             element={
               <div>
                 <Nav toggleDrawer={handleDrawerOpen}></Nav>
-                <SideBar open={open} toggleDrawer={handleDrawerClose}></SideBar>
-                <SpecificChannels/>
+                <SideBar open={open} toggleDrawer={handleDrawerClose} currentchannel={currentchannel} setcurrentchannel={setcurrentchannel}></SideBar>
+                <SpecificChannels currentchannel={currentchannel}/>
               </div>
             }
           />

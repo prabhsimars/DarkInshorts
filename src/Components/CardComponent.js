@@ -3,6 +3,7 @@ import "../App.css";
 import { BsBookmarkPlus } from "react-icons/bs";
 import Card from "react-bootstrap/Card";
 import { convertMsToTime } from "./MilitoTime";
+import {bookmarkarray} from "./Bookmarks"
 
 function CardComponent({
   count,
@@ -29,6 +30,7 @@ function CardComponent({
           <BsBookmarkPlus
             className="cardbookmarks"
             id={"bookmark" + idno}
+            // onClick={arrayadd}
           ></BsBookmarkPlus>
         </div>
         <Card.Img
