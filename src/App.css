@@ -1,67 +1,222 @@
-.App{
-  text-align: center;
-  color: white;
-  background-color: rgb(0, 0, 0);
+html {
+  background-color: rgb(248, 249, 250);
 }
 
+.App {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin: 0;
+  padding: 0;
+  background-color: rgb(248, 249, 250);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
 /* navbar */
 
-#navbardiv{
-  background-color: rgb(37, 37, 37);
-  border: 2px solid black;
-  padding: 0.5rem;
+.navIcon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
 }
 
+.navIcons {
+  display: flex;
+  justify-content: center;
+}
 
-.navbar-brand{
+/* titleBar */
+
+.titleBar {
+  margin-top: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 3rem;
+  width: 80%;
+}
+
+.boxforbottomborder {
+  width: 100%;
+  border-bottom: 1px solid rgb(184, 184, 184);
+}
+
+#titleaa {
+  font-size: 3rem;
+  color: black;
+  font-weight: bolder;
+}
+
+#dayaa {
+  color: grey;
   font-size: 2rem;
   font-weight: bold;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: -1rem;
 }
 
-/* container */
-
-#cardscontainer {
-  color: rgb(0, 0, 0);
-  text-align: center;
-}
-
-#gridrow1{
-  background-color: rgb(0, 0, 0);
-  border-right: 2px solid rgb(255, 255, 255);
-  border-bottom: 2px solid rgb(255, 255, 255);
-  border-left: 2px solid rgb(98, 98, 98);
-  border-top: 2px solid rgb(98, 98, 98);
-  
+#title_image {
+  width: 7rem;
+  height: auto;
+  margin-top: 1rem;
+  mix-blend-mode:color-burn;
   border-radius: 10px;
-  padding: 1.5vh;
+
+}
+
+/* sidebar */
+
+.SwipeableDrawer{
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+#sidebarClose {
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  margin: 0.5rem;
+}
+
+.sidebar_titles{
+  margin:0.5rem 0 0 1rem;
+  font-weight: bold;
   font-size: 1rem;
 }
 
-.cardscontainercol{
-  padding: 1rem;
+
+#sidebarSearcher{
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
 }
 
-.cardtitle{
-  font-size: 1.5vw;
+#sidebarSearcher::placeholder{
+  color: rgb(127, 127, 127);
+}
+
+
+.sidebarIcons{
+  font-size: 1.3rem;
+  position: absolute;
+}
+
+/* Increase the specificity */
+.MenuItem.Mui-selected {
+  border: 0.5px solid black;
+  border-radius: 0.5rem;
+  transition: 0.1s all ;
+  color: rgb(76, 75, 75);
+}
+
+
+.newschannelimages{
+  width: 2rem;
+  height: auto;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 0.5rem;
+}
+
+
+/* cards */
+
+.cardscol{
+  position: relative;
+  padding: 1rem 0 0.2rem 0;
+  
+}
+
+.cardscol.col{
+  width: 26rem;
+  margin: auto;
+  
+}
+
+
+.cardbookmarksdiv{
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.412);
+  right: 0%;
+  border: 1px solid rgb(43, 43, 43);
+  border-radius: 20px;
+  margin: 0.3rem;
+  transition: 0.2s ease-in-out;
+}
+
+.cardbookmarksdiv:hover{
+  background-color: white;
+  
+}
+
+
+.cardbookmarks{
+  padding: 0.4rem;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+}
+
+.cardimg{
+  height: 16rem;
+}
+
+/* to limit the number of lines to show */
+.modernWay {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+          line-clamp: 4; 
+  -webkit-box-orient: vertical;
 }
 
 .author{
-  text-align: left;
-}
-
-#gridgridcol2{
-background-color: black;
-color: white;
-height: 100%;
+  position: absolute;
+  right:-1rem;
+  font-size: 0.75rem;
+  bottom: 0;
+  width: 30%;
+  
 }
 
 .cardbtns{
-  text-align: center;
+  width: auto;
+  position: absolute;
+  left:1rem;
+  bottom: 0;
 }
 
-.cardbtn{
-  font-size: 1vw;
-  width: 50%;
+.itemurlp{
+  text-decoration: none;
+  color: grey;
+  transition: 0.2s ease-in-out;
+}
+
+.itemurlp p{
+  font-size: 0.7rem;
+}
+
+.itemurlp:hover{
+  color: black;
+  
+}
+
+
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f100; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
