@@ -17,10 +17,7 @@ function SpecificChannels({currentchannel}) {
     // news state
   const [channelnews, channelsetnews] = useState([]);
 
-  console.log(currentchannel);
-
   useEffect(() => {
-    console.log("USEEFFECT");
     async function GetNews() {
       const response = await axios.get(
         `${baseURL}/everything?domains=${currentchannel}&apiKey=${API_KEY}`
@@ -31,7 +28,7 @@ function SpecificChannels({currentchannel}) {
   }, [currentchannel]);
 
 
-  console.log(channelnews)
+  console.log(channelnews);
 
   
   const getColumnsForRow = () => {

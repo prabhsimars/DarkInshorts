@@ -10,13 +10,11 @@ import Bookmarks from "./Components/Bookmarks";
 import SpecificChannels from "./Components/SpecificChannels";
 
 // images
-import newspng from './Images/news.png';
+
 
 
 function App() {
 
-  // titlebar news icon
-  const [icon, seticon] = useState(newspng)
 
   // sidebar state
   const [open, setOpen] = useState(false);
@@ -25,7 +23,7 @@ function App() {
 
 
   // for choosing the channel
-  const [currentchannel, setcurrentchannel] = useState("hindustantimes.com");
+  const [currentchannel, setcurrentchannel] = useState("ndtv.com");
 
   return (
     <Router>
@@ -35,8 +33,8 @@ function App() {
             path="/"
             element={
               <div>
-                <Nav toggleDrawer={handleDrawerOpen} icon={newspng}></Nav>
-                <SideBar open={open} toggleDrawer={handleDrawerClose} currentchannel={currentchannel} setcurrentchannel={setcurrentchannel}></SideBar>
+                <Nav toggleDrawer={handleDrawerOpen}></Nav>
+                <SideBar open={open} toggleDrawer={handleDrawerClose} setcurrentchannel={setcurrentchannel}></SideBar>
                 <HomePageCards />
               </div>
             }
@@ -46,8 +44,8 @@ function App() {
             path="/bookmarks"
             element={
               <div>
-                <Nav toggleDrawer={handleDrawerOpen} icon={newspng}></Nav>
-                <SideBar open={open} toggleDrawer={handleDrawerClose} currentchannel={currentchannel} setcurrentchannel={setcurrentchannel}></SideBar>
+                <Nav toggleDrawer={handleDrawerOpen}></Nav>
+                <SideBar open={open} toggleDrawer={handleDrawerClose} setcurrentchannel={setcurrentchannel}></SideBar>
                 <Bookmarks />
               </div>
             }
@@ -57,8 +55,8 @@ function App() {
             path="/specificnews"
             element={
               <div>
-                <Nav toggleDrawer={handleDrawerOpen} icon={icon}></Nav>
-                <SideBar open={open} toggleDrawer={handleDrawerClose} seticon={seticon} setcurrentchannel={setcurrentchannel}></SideBar>
+                <Nav toggleDrawer={handleDrawerOpen}></Nav>
+                <SideBar open={open} toggleDrawer={handleDrawerClose} setcurrentchannel={setcurrentchannel}></SideBar>
                 <SpecificChannels currentchannel={currentchannel} />
               </div>
             }

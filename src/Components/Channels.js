@@ -10,9 +10,12 @@ import { NewsChannels } from "./NewsChannels";
 import { SidebarCat } from "./SidebarCat";
 import { Link } from "react-router-dom";
 
-function Channels({ selectedIndex, handleListItemClick, setcurrentchannel,seticon }) {
 
-
+function Channels({
+  selectedIndex,
+  handleListItemClick,
+  setcurrentchannel
+}) {
   return (
     <div>
       <p className="sidebar_titles">News</p>
@@ -27,7 +30,9 @@ function Channels({ selectedIndex, handleListItemClick, setcurrentchannel,setico
                 className="MenuItem"
                 id={"listitem" + title.id}
                 selected={selectedIndex === title.id}
-                onClick={(event) => handleListItemClick(event, title.id)}
+                onClick={(event) => {
+                  handleListItemClick(event, title.id);
+                }}
               >
                 <ListItemIcon style={{ color: "black" }}>
                   {title.icon}
@@ -54,7 +59,6 @@ function Channels({ selectedIndex, handleListItemClick, setcurrentchannel,setico
                 onClick={(event) => {
                   handleListItemClick(event, item.id);
                   setcurrentchannel(item.value);
-                  seticon(item.image)
                 }}
               >
                 <ListItemIcon>

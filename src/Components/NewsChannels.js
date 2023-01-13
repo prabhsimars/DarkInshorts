@@ -15,11 +15,12 @@ import vox from '../Images/newschannelimages/vox.png';
 import washingtonpost from '../Images/newschannelimages/washingtonpost.png';
 
 export const NewsChannels = [
+    
     {
-      name:'Hindustan Times',
-      image:hindustantimes,
+      name:'NDTV',
+      image:ndtv,
       id:1,
-      value:'hindustantimes.com'
+      value:'ndtv.com'
     },
     {
       name:'India Today',
@@ -34,10 +35,10 @@ export const NewsChannels = [
       value:'indiatimes.com'
     },
     {
-      name:'NDTV',
-      image:ndtv,
+      name:'Hindustan Times',
+      image:hindustantimes,
       id:4,
-      value:'ndtv.com'
+      value:'hindustantimes.com'
     },
     {
       name:'Vox',
