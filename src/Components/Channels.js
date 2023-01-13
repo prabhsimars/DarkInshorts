@@ -9,9 +9,8 @@ import {
 import { NewsChannels } from "./NewsChannels";
 import { SidebarCat } from "./SidebarCat";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
-function Channels({ selectedIndex, handleListItemClick, currentchannel, setcurrentchannel }) {
+function Channels({ selectedIndex, handleListItemClick, setcurrentchannel,seticon }) {
 
 
   return (
@@ -55,6 +54,7 @@ function Channels({ selectedIndex, handleListItemClick, currentchannel, setcurre
                 onClick={(event) => {
                   handleListItemClick(event, item.id);
                   setcurrentchannel(item.value);
+                  seticon(item.image)
                 }}
               >
                 <ListItemIcon>

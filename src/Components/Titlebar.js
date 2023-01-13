@@ -2,9 +2,8 @@ import React from "react";
 import "../App.css";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import newspng from '../Images/news.png';
 
-function Titlebar() {
+function Titlebar({icon}) {
   const weekday = [
     "Sunday",
     "Monday",
@@ -26,7 +25,7 @@ function Titlebar() {
             <div id="dayaa">{day}</div>
           </Navbar.Brand>
           <Navbar.Collapse className="justify-content-end">
-            <img id="title_image" src={newspng} alt={""}></img>
+            <img id="title_image" src={icon} alt={""}></img>
           </Navbar.Collapse>
         </Container>
       </Navbar>

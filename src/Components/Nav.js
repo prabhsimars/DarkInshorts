@@ -6,7 +6,7 @@ import {BsLayoutTextSidebarReverse} from 'react-icons/bs'
 import {CgProfile} from 'react-icons/cg'
 import Titlebar from './Titlebar';
 
-function NAV({toggleDrawer}) {
+function NAV({toggleDrawer, icon}) {
 
   
   return (
@@ -24,7 +24,7 @@ function NAV({toggleDrawer}) {
       </Container>
     </Navbar>
     {/* title bar */}
-    <Titlebar/>
+    <Titlebar icon={icon}/>
     </div>
   )
 }

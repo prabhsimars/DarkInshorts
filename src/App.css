@@ -8,7 +8,7 @@ html {
   margin: 0;
   padding: 0;
   background-color: rgb(248, 249, 250);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 /* navbar */
@@ -55,7 +55,9 @@ html {
 #title_image {
   width: 7rem;
   height: auto;
-  mix-blend-mode:color-burn;
+  margin-top: 1rem;
+  /* mix-blend-mode:color-burn; */
+  border-radius: 10px;
 
 }
 
@@ -73,8 +75,8 @@ html {
 
 .sidebar_titles{
   margin:0.5rem 0 0 1rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
   font-size: 1rem;
 }
 
@@ -159,8 +161,8 @@ html {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
-          line-clamp: 3; 
+  -webkit-line-clamp: 4;
+          line-clamp: 4; 
   -webkit-box-orient: vertical;
 }
 

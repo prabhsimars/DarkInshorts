@@ -12,7 +12,7 @@ import { MdKeyboardArrowLeft } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
 import Channels from "./Channels";
 
-export default function SideBar({ open, toggleDrawer, currentchannel, setcurrentchannel }) {
+export default function SideBar({ open, toggleDrawer, setcurrentchannel, seticon }) {
 
    // drawer selection settings
    const [selectedIndex, setSelectedIndex] = useState(111);
@@ -55,7 +55,7 @@ export default function SideBar({ open, toggleDrawer, currentchannel, setcurrent
                 />
               </div>
               {/* all sidebar content */}
-              <Channels selectedIndex={selectedIndex} handleListItemClick={handleListItemClick} currentchannel={currentchannel} setcurrentchannel={setcurrentchannel}/>
+              <Channels selectedIndex={selectedIndex} handleListItemClick={handleListItemClick} setcurrentchannel={setcurrentchannel} seticon={seticon}/>
             </Box>
           </SwipeableDrawer>
         </React.Fragment>

@@ -39,7 +39,7 @@ function CardComponent({
           src={urlToImage}
           alt={"Photo Not Available"}
         />
-        <Card.Body style={{ height: "17rem" }}>
+        <Card.Body style={{ height: "19rem" }}>
           <Card.Title style={{ fontWeight: "bolder" }}>{title}</Card.Title>
           {/* <Card.Text style={{textAlign:"end"}}><i>{item.source.name}</i></Card.Text> */}
           <Card.Text className="modernWay">{description}</Card.Text>
